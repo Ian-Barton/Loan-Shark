@@ -52,20 +52,27 @@
         <div class="row">
             <div class="col-4 bg-light">
                 <label class="form-label">Loan Amount</label>
-                <input id="loan" type="text" class="form-control" placeholder="0.00" aria-label="Loan Amount">
+                <input id="loan" type="text" class="form-control" placeholder="0.00" value="25000" aria-label="Loan Amount">
 
                 <label class="form-label">Term (Months)</label>
-                <input id="term" type="text" class="form-control" placeholder="00" aria-label="Term (Months)">
+                <input id="term" type="text" class="form-control" placeholder="00" value="60" aria-label="Term (Months)">
 
                 <label class="form-label">Interest Rate</label>
-                <input id="rate" type="text" class="form-control" placeholder="0%" aria-label="Interest Rate">
+                <input id="rate" type="text" class="form-control" placeholder="0%" value="5" aria-label="Interest Rate">
 
                 <div class="col-12 d-flex justify-content-end pt-2">
                     <button id="btnSubmit" type="button" class="btn btn-dark btn-md">Display Numbers</button>
                 </div>
             </div>
             <div class="col-8 bg-info">
-
+                <div class="col-12 d-flex justify-content-center"><h1>Your Montly Payments</h1></div>
+                <div class="col-12 d-flex justify-content-center"><h1>$0.00</h1></div>
+                <div class="col-6"><h3>Total Principal</h3></div>
+                <div class="col-6"><h3></h3></div>
+                <div class="col-6"><h3>Total Interest</h3></div>
+                <div class="col-6"><h3></h3></div>
+                <div class="col-6"><h3>Total Cost</h3></div>
+                <div class="col-6"><h3></h3></div>
             </div>
         </div>
         <div class="table-responsive">
