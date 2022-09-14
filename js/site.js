@@ -6,8 +6,8 @@ function getValues() {
     if (Number.isNaN(loan) && Number.isNaN(term) && Number.isNaN(rate)) {
         alert("You must enter integers only.");
     }else{
-        let fbArray = calculate(loan, term, rate);
-        display(fbArray);
+        let returnObject = calculate(loan, term, rate);
+        display(returnObject);
     }
 }
 
@@ -42,31 +42,41 @@ function calculate(loan, term, rate) {
         returnArray.push(interest_total.toFixed(2));
         returnArray.push(total_interest.toFixed(2));
         returnArray.push(remaining_balance.toFixed(2));
-        
-        returnObject.month = monthly_exponent;
-        returnObject.interest = total_interest;
-        returnObject.principal = principal_payment;
+        returnObject.interest = total_interest.toFixed(2);
+        returnObject.principal = loan;
+        returnObject.month = monthly_exponent.toFixed(2);
     }
-    returnObject.array = returnArray;
+    returnObject.ar = returnArray;
     return returnObject;
 }
 
-function display(fbArray) {
+function display(returnObject) {
     let tableBody = document.getElementById("results");
 
     let rowTemplate = document.getElementById("fbTemplate");
-
     tableBody.innerHTML = "";
+    document.getElementById("principal").innerHTML = "";
+    document.getElementById("interest").innerHTML = "";
+    document.getElementById("cost").innerHTML = "";
+    document.getElementById("month").innerHTML = "";
 
-    for (let i = 0; i < fbArray.length; i += 6) {
+    let principal = returnObject.principal;
+    let interest = returnObject.interest;
+    let cost = parseFloat(principal) + parseFloat(interest);
+
+    for (let i = 0; i < returnObject.ar.length; i += 6) {
         let tableRow = document.importNode(rowTemplate.content, true);
         let rowCols = tableRow.querySelectorAll("td");
-        rowCols[0].textContent = fbArray.array[i];
-        rowCols[1].textContent = fbArray.array[i + 1];
-        rowCols[2].textContent = fbArray.array[i + 2];
-        rowCols[3].textContent = fbArray.array[i + 3];
-        rowCols[4].textContent = fbArray.array[i + 4];
-        rowCols[5].textContent = fbArray.array[i + 5];
+        rowCols[0].textContent = returnObject.ar[i];
+        rowCols[1].textContent = returnObject.ar[i + 1];
+        rowCols[2].textContent = returnObject.ar[i + 2];
+        rowCols[3].textContent = returnObject.ar[i + 3];
+        rowCols[4].textContent = returnObject.ar[i + 4];
+        rowCols[5].textContent = returnObject.ar[i + 5];
         tableBody.appendChild(tableRow);
     }
+    document.getElementById("month").innerHTML = returnObject.month;
+    document.getElementById("principal").innerHTML = principal;
+    document.getElementById("interest").innerHTML = interest;
+    document.getElementById("cost").innerHTML =  cost;
 }

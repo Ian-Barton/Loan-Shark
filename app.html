@@ -20,7 +20,7 @@
 <!--Nav Section-->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" class="d-inline-block align-text-top" width="30">App Name</a>
+        <a class="navbar-brand" href="#"><img src="img/logo.png" class="d-inline-block align-text-top" width="30">Loan Shark</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -32,6 +32,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="app.html">The App</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="app2.html">App V2</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="code.html">The Code</a>
@@ -66,13 +69,20 @@
             </div>
             <div class="col-8 bg-info">
                 <div class="col-12 d-flex justify-content-center"><h1>Your Montly Payments</h1></div>
-                <div class="col-12 d-flex justify-content-center"><h1>$0.00</h1></div>
-                <div class="col-6"><h3>Total Principal</h3></div>
-                <div class="col-6"><h3></h3></div>
-                <div class="col-6"><h3>Total Interest</h3></div>
-                <div class="col-6"><h3></h3></div>
-                <div class="col-6"><h3>Total Cost</h3></div>
-                <div class="col-6"><h3></h3></div>
+                <div class="col-12 d-flex justify-content-center"><h1 id="month">$0.00</h1></div>
+                <div class="row">
+                    <div class="col-6"><h3>Total Principal</h3></div>
+                    <div class="col-6 d-flex justify-content-end"><h3 id="principal"></h3></div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><h3>Total Interest</h3></div>
+                    <div class="col-6 d-flex justify-content-end"><h3 id="interest"></h3></div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><h3>Total Cost</h3></div>
+                    <div class="col-6 d-flex justify-content-end"><h3 id="cost"></h3></div>
+                </div>
+                
             </div>
         </div>
         <div class="table-responsive">

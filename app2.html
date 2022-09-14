@@ -12,7 +12,6 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     
     <link href="css/site.css" rel="stylesheet">
-    <link href="css/prism.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/logo.png">
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
 </head>
@@ -35,10 +34,10 @@
                     <a class="nav-link" href="app.html">The App</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="app2.html">App V2</a>
+                    <a class="nav-link active" aria-current="page" href="app2.html">App V2</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page">The Code</a>
+                    <a class="nav-link" href="code.html">The Code</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="#">Git Repo</a>
@@ -52,25 +51,6 @@
     </div>
 </nav>
 <main class="flex-shrink-0">
-    <div class="container py-5 px-5 mt-5">
-        <h2 class="border-1 border-bottom border-dark">The Code</h2>
-        <div class="row row-cols-1 row-cols-lg-2">
-            <div class="col-lg-8">
-                <pre class="line-numbers">
-                    <code class="language-javascript">
-                        function HelloWorld() {
-                            alert("Hello World");
-                        }
-                    </code>
-                </pre>
-            </div>
-            <div class="col-lg-4">
-                <p>The Code is structed in one Function.</p>
-                <h5>Hello World.</h5>
-                <p>Hello World is a Function that displays an Alert that contains the message "Hello Wolrd."</p>
-            </div>
-        </div>
-    </div>
 </main>
 <footer class="footer mt-auto py-3 sticky-footer">
     <div class="container-fluid text-center">
@@ -94,16 +74,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
 </script>
-<script src="js/site.js"></script>
-<script src="js/prism.js"></script>
-    <script>
-        Prism.plugins.NormalizeWhitespace.setDefaults({
-        'remove-trailing': true,
-        'remove-indent': true,
-        'left-trim': true,
-        'right-trim': true
-        })
-    </script>
+<script src="js/site2.js"></script>
 </body>
 
 </html>
